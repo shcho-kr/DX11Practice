@@ -1,10 +1,9 @@
 */
 *.ipch
-*.vcsproj
-*.vcsproj.*
+*.vcxproj
 *.txt
 *.user
 *.userosscache
+*.sln
 *.sln.docstates
 *.vcxproj.filters
-
