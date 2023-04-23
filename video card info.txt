@@ -1,2 +1,0 @@
-video card name: Intel(R) Iris(R) Xe Graphics 
-video card memory: 128

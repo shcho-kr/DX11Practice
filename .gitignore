@@ -2,3 +2,9 @@
 *.ipch
 *.vcsproj
 *.vcsproj.*
+*.txt
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+
