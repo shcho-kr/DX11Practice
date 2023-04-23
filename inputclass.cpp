@@ -1,4 +1,4 @@
-﻿////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Filename: inputclass.cpp
 ////////////////////////////////////////////////////////////////////////////////
 #include "inputclass.h"
@@ -21,37 +21,37 @@ InputClass::~InputClass()
 
 void InputClass::Initialize()
 {
-    int i;
+	int i;
+	
 
+	// Initialize all the keys to being released and not pressed.
+	for(i=0; i<256; i++)
+	{
+		m_keys[i] = false;
+	}
 
-    // 모든 키들을 눌리지 않은 상태로 초기화합니다.
-    for (i = 0; i < 256; i++)
-    {
-        m_keys[i] = false;
-    }
-
-    return;
+	return;
 }
 
 
 void InputClass::KeyDown(unsigned int input)
 {
-    // 키가 눌렸다면 그 상태를 배열에 저장합니다.
-    m_keys[input] = true;
-    return;
+	// If a key is pressed then save that state in the key array.
+	m_keys[input] = true;
+	return;
 }
 
 
 void InputClass::KeyUp(unsigned int input)
 {
-    // 키가 떼어졌다면 그 상태를 배열에 저장합니다.
-    m_keys[input] = false;
-    return;
+	// If a key is released then clear that state in the key array.
+	m_keys[input] = false;
+	return;
 }
 
 
 bool InputClass::IsKeyDown(unsigned int key)
 {
-    // 현재 키가 눌림/뗌 상태인지 반환합니다.
-    return m_keys[key];
+	// Return what state the key is in (pressed/not pressed).
+	return m_keys[key];
 }
